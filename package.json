@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/BrunoRafael/isNotTrash-server/issues"
   },
+
   "homepage": "https://github.com/BrunoRafael/isNotTrash-server#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
