@@ -1,7 +1,7 @@
 var timeout = require('../resources/timeout/timeout.js'),
 	Promotion = require('../models/promotionModel.js'),
 	Notification = require('../models/notificationModel.js'),
-	Comment = require('../models/commentModel.js'),
+	Comment = require('../models/CommentModel.js'),
 	User = require('../models/userModel.js'),
 	Establishment = require('../models/establishmentModel.js'),
 	EstablishmentController = require('../controllers/establishmentController.js'),
