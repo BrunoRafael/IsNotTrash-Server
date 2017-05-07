@@ -1,5 +1,5 @@
 var User = require('../models/UserModel.js');
-var promotionController = require('./promotionController.js');
+var promotionController = require('./PromotionController.js');
 var cloudinary = require('cloudinary');
 
 exports.list = (resolve, reject) => {
