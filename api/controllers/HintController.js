@@ -4,7 +4,7 @@
 var mongoose = require('mongoose'),
     Hint = require('../models/HintModel.js'),
     NotificationController = require('./notificationController.js'),
-    UserController = require('./userController.js'),
+    UserController = require('./UserController.js'),
     WebSocket = require('../resources/web_socket/WebSocket.js');
 
 exports.save = function (title, text, imgUrl, establishmentId, callback) {
