@@ -3,7 +3,7 @@ var validator = require('validator');
 var userController = require('../controllers/UserController.js');
 var establishmentController = require('../controllers/EstablishmentController.js');
 var router = express.Router();
-var loginController = require('../controllers/loginController.js');
+var loginController = require('../controllers/LoginController.js');
 
 router.post('/', function(req, res){
 
