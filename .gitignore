@@ -40,9 +40,7 @@ node_modules/
 script/script.sh
 
 node_modules/
-bower_components/
 platforms/
-public/
 plugins/
 .idea/
 www/lib/

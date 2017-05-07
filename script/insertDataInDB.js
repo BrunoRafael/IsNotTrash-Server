@@ -1,94 +1,104 @@
-var Promotion =require('../api/models/PromotionModel.js'),
-    User = require('../api/models/UserModel.js'),
-    Establishment = require('../api/models/EstablishmentModel.js');
+var Promotion =require('../api/models/promotionModel.js'),
+    Hint =require('../api/models/HintModel.js'),
+    User = require('../api/models/userModel.js'),
+    Establishment = require('../api/models/establishmentModel.js');
 
 var promotions = [
-    {_company: null, productName: 'Batatas granfinas',
-      price: { unit: 'kg', actual: 2.50, old: 4.80},
-      startDate: 1476478951910,
-      endDate: 1477342951910,
-      reason: 'Danificação',
-      shelf_life: 1508878951910,
-      conservation: 'Natural',
-      images: ['http://hortas.info/sites/default/files/field/imagens/batata-doce/batata-doce008.jpg'],
-      evaluates: {
-        user_likes: [],
-        comments: []
+  {
+    _company: null, productName: 'Batatas granfinas',
+    productType: 'Batatas',
+    price: { unit: 'kg', actual: 2.50, old: 4.80 },
+    startDate: 1476478951910,
+    endDate: 1477342951910,
+    reason: 'Danificação',
+    shelf_life: 1508878951910,
+    conservation: 'Natural',
+    images: ['http://climatologiageografica.com.br/wp-content/uploads/2015/05/1.jpg'],
+    evaluates: {
+      user_likes: [],
+      comments: []
+    }
+  },
+  {
+    _company: null,
+    productName: 'Maçãs',
+    productType: 'Maçãs',
+    price: { unit: 'kg', actual: 3.80, old: 5.80 },
+    startDate: 1465938685451,
+    endDate: 1466802633300,
+    reason: 'Danificação',
+    shelf_life: 1466975581209,
+    conservation: 'Natural',
+    images: ['http://remediodaterra.com.br/wp-content/uploads/2015/08/Ma%C3%A7%C3%A3-benef%C3%ADcios-e-propriedades-ma%C3%A7%C3%A3s-verdes-e-vermelhas.jpg'],
+    evaluates: {
+      user_likes: [],
+      comments: []
+    }
+  },
+
+  {
+    _company: null,
+    productName: 'Maçã Verde',
+    productType: 'Maçãs',
+    price: { unit: 'kg', actual: 3.80, old: 5.80 },
+    startDate: 1465938685451,
+    endDate: 1466802633390,
+    reason: 'Danificação',
+    shelf_life: 1466975581209,
+    conservation: 'Natural',
+    images: ['http://vivomaissaudavel.com.br/static/media/uploads/maca-verde.jpg'],
+    evaluates: {
+      user_likes: [],
+      comments: []
+    }
+  },
+
+  {
+    _company: null,
+    productName: 'Suco de caixa del Valle',
+    productType: 'Suco',
+    price: { unit: 'kg', actual: 1.80, old: 3.80 },
+    startDate: 1466284790583,
+    endDate: 1466543990583,
+    reason: 'Validade',
+    shelf_life: 1466803190583,
+    conservation: 'Refrigeração',
+    images: ['http://www.extraplus.com.br/media/W1siZiIsIjIwMTIvMDgvMDEvMDhfMjhfMDFfNjc4XzI1ODA5OF9CZWJpZGFfS2Fwb19Nb3JhbmdvXzIwMG1sLmpwZyJdXQ/258098-Bebida-Kapo-Morango-200ml.jpg'],
+    evaluates: {
+      user_likes: [],
+      comments: []
+    }
+  }
+
+];
+  var establishments = [
+    {
+      name: 'Doces && salgados cascata de vento',
+      email: 'cascatadevento@mail.com',
+      password: '123456',
+      subtitle: 'Doces e salgados pelo melhor preço',
+      imageUrl: 'http://www.doceriafantasias.com.br/wp-content/files_flutter/1266844263home-1.jpg',
+      type: 'Doceria',
+      cnpj: '566965633',
+      phones: ['83992069565', '83332102258'],
+      likes: undefined,
+      totalNumberOfPublications: 0,
+      address: {
+        street: 'Rua das Bermudas',
+        neighborhood: 'Bodocongo',
+        number: 88,
+        cep: 569966,
+        city: 'Campina Grande',
+        uf: 'PB',
+        rank: 0
       }
     },
-      {_company: null,
-        productName: 'Maçãs',
-        price: { unit: 'kg', actual: 3.80, old: 5.80},
-        startDate: 1465938685451,
-        endDate: 1466802633366,
-        reason: 'Danificação',
-        shelf_life: 1466975581209,
-        conservation: 'Natural',
-        images: ['http://www.thaisagalvao.com.br/arearestrita/arquivos/Materias%20002.jpg'],
-        evaluates: {
-          user_likes: [],
-          comments: []
-        }
-      },
 
-      {_company: null,
-        productName: 'Suco de caixa del Valle',
-        price: { unit: 'kg', actual: 1.80, old: 3.80},
-        startDate: 1466284790583,
-        endDate: 1466543990583,
-        reason: 'Validade',
-        shelf_life: 1466803190583,
-        conservation: 'Refrigeração',
-        images: ['http://www.extraplus.com.br/media/W1siZiIsIjIwMTIvMDgvMDEvMDhfMjhfMDFfNjc4XzI1ODA5OF9CZWJpZGFfS2Fwb19Nb3JhbmdvXzIwMG1sLmpwZyJdXQ/258098-Bebida-Kapo-Morango-200ml.jpg'],
-        evaluates: {
-          user_likes: [],
-          comments: []
-        }
-      },
-
-      {_company: null,
-        productName: 'Iougurte nestle',
-        price: { unit: '4 unidades', actual: 5.80, old: 8.80},
-        startDate: 1465939566941,
-        endDate: 1466544366941,
-        reason: 'Validade',
-        shelf_life: 1466803612040,
-        conservation: 'Refrigeração',
-        images: ['http://glicose.com.br/wp-content/uploads/2015/05/iogurte-grego-light.jpg'],
-        evaluates: {
-          user_likes: [],
-          comments: []
-        }
-      }
-
-    ],
-    establishments = [
-      {name: 'Doces && salgados cascata de vento',
-        email: 'cascatadevento@mail.com',
-        password: '123456',
-        subtitle: 'Doces e salgados pelo melhor preço',
-        imageUrl:'http://www.doceriafantasias.com.br/wp-content/files_flutter/1266844263home-1.jpg',
-        type:'Doceria',
-        cnpj:'566965633',
-        phones: ['83992069565','83332102258'],
-        likes: undefined,
-        totalNumberOfPublications: 0,
-        address: {
-          street: 'Rua das Bermudas',
-          neighborhood: 'Bodocongo',
-          number: 88,
-          cep: 569966,
-          city: 'Campina Grande',
-          uf: 'PB',
-          rank: 0
-        },
-
-      },
       {name: 'Supermercado quero mais',
         email: 'queromais@mail.com',
         password: '123456',
         subtitle: 'Quanto mais você compra mais você quer',
-        imageUrl:'https://www.google.com.br/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwidjZ-83KjNAhUGDpAKHcHIC_EQjBwIBA&url=http%3A%2F%2Fww2.baguete.com.br%2Fadmin%2F%2Fcache%2Fimage%2Fnoticias%2F2016%2F03%2F1459174095_supermercadoLisaS.shutterstock.jpg&bvm=bv.124272578,d.Y2I&psig=AFQjCNFzizpaSD09HjnC0DRbzUppu_l1iA&ust=1466035097948808',
+        imageUrl:'http://www.vivoseudinheiro.com.br/libs/uploads/2015/07/seudinheiro-Compras-de-supermercado-635x423.jpg',
         type:'Supermercado',
         cnpj:'5233669874',
         likes: undefined,
@@ -100,52 +110,61 @@ var promotions = [
           number: 120,
           cep: 50221400,
           city: 'Campina Grande',
-          uf: 'PB',
-          rank: 0
+          uf: 'PB'
         }
       },
-      {name: 'Rede de suspermercados da guia',
-        email: 'daguia@mail.com',
-        password: '123456',
-        subtitle: 'Guiando você para o melhor',
-        imageUrl:'http://radiounasp.com.br/novo/wp-content/uploads/2016/03/Pesquisa-indica-que-Classe-C-esta-comprando-menos-em-supermercados.jpg',
-        type:'Supermercado',
-        cnpj:'52336541',
-        likes: undefined,
-        totalNumberOfPublications: 0,
-        phones: ['83982069565','8333002258'],
-        address: {
-          street: 'Rua dez de Dezembro',
-          neighborhood: 'Catolé',
-          number: 1622,
-          cep: 500021411,
-          city: 'Campina Grande',
-          uf: 'PB',
-          rank: 0
-        },
+        {
+          name: 'Rede de suspermercados da guia',
+          email: 'daguia@mail.com',
+          password: '123456',
+          subtitle: 'Guiando você para o melhor',
+          imageUrl: 'http://www.mercadotododia.com.br/wp-content/uploads/2015/02/shutterstock_140952511.jpg',
+          type: 'Supermercado',
+          cnpj: '52336541',
+          likes: undefined,
+          totalNumberOfPublications: 0,
+          phones: ['83982069565', '8333002258'],
+          address: {
+            street: 'Rua dez de Dezembro',
+            neighborhood: 'Catolé',
+            number: 1622,
+            cep: 500021411,
+            city: 'Campina Grande',
+            uf: 'PB'
+          }
+        }
+  ],
 
-      }
-    ],
-
-    users = [{
-      name: 'Bruno Rafael Araújo Vasconcelos',
-      email: 'bruno@mail.com',
+  users = [{
+    name: 'Bruno Rafael Araújo Vasconcelos',
+    email: 'bruno@mail.com',
+    password: '123456',
+    phone: '83982069790',
+    photo: undefined,
+    settings: {
+      language: undefined,
+      removeFinishPromotions: undefined
+    }
+  }, {
+      name: 'Diego Augusto Moura de Oliveira',
+      email: 'daugustomoura@gmail.com',
       password: '123456',
-      phone:'83982069790',
-      photo:undefined,
-      settings:{
+      phone: '83999415698',
+      photo: undefined,
+      settings: {
         language: undefined,
         removeFinishPromotions: undefined
       }
     }];
 
-exports.startDataBase = function addDatabase(){
+exports.startDataBase = function addDatabase() {
 
+  removeHints();
   User.remove({}, function(err){
     if(err){
       console.log("Erro ao remover a coleção : users" );
     } else {
-      console.log("coleção removida : users" );
+      console.log("coleção removida : users");
       addUsers();
     }
   });
@@ -154,12 +173,12 @@ exports.startDataBase = function addDatabase(){
     if(err){
       console.log("Erro ao remover a coleção : promotions" );
     } else {
-      console.log("coleção removida : promotions" );
-      Establishment.remove({}, function(err){
-        if(err){
-          console.log("Erro ao remover a coleção : establishments" );
+      console.log("coleção removida : promotions");
+      Establishment.remove({}, function (err) {
+        if (err) {
+          console.log("Erro ao remover a coleção : establishments");
         } else {
-          console.log("coleção removida : establishments" );
+          console.log("coleção removida : establishments");
           addEstablishments();
         }
       });
@@ -167,14 +186,14 @@ exports.startDataBase = function addDatabase(){
   });
 };
 
-function addEstablishments(){
+function addEstablishments() {
   var item = establishments.pop();
   var establishment = new Establishment(item);
-  establishment.save(function(err, savedDocument){
-    if(err) {
+  establishment.save(function (err, savedDocument) {
+    if (err) {
       throw err;
     }
-    if(establishments.length > 0){
+    if (establishments.length > 0) {
       console.log('Document saved name ' + savedDocument.name);
       addEstablishments();
     } else {
@@ -184,27 +203,37 @@ function addEstablishments(){
   });
 }
 
+function removeHints(){
+  Hint.remove({}, function(err){
+    if(err){
+      console.log("Erro ao remover a coleção : hints" );
+    } else {
+      console.log("coleção removida : hints");
+    }
+  });
+}
+
 function addUsers(){
   var user = new User(users.pop());
-  user.save(function(err, savedDocument){
-    if(err) {
+  user.save(function (err, savedDocument) {
+    if (err) {
       throw err;
     }
     console.log('User saved name ' + savedDocument.name);
 
-    if(users.length > 0){
+    if (users.length > 0) {
       addUsers();
     }
   });
 }
 
-function addPromotions(){
-  Establishment.find({}, function(err, documents){
-    for(var i in promotions){
+function addPromotions() {
+  Establishment.find({}, function (err, documents) {
+    for (var i in promotions) {
       var promotion = new Promotion(promotions[i]);
-      promotion._company = documents[i%3]._id;
-      promotion.save(function(err, savedDocument){
-        if(err) {
+      promotion._company = documents[i % 3]._id;
+      promotion.save(function (err, savedDocument) {
+        if (err) {
           throw err;
         }
         console.log('Promotion saved name ' + savedDocument.productName);

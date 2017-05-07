@@ -33,6 +33,10 @@ var userSchema = new Schema({
     removeFinishPromotions : {
       type: Boolean,
       default: false
+    },
+    vibration:{
+      type: Boolean,
+      default: true
     }
   }
 });

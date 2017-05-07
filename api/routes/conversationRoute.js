@@ -1,6 +1,6 @@
 var express = require('express'),
 	router = express.Router(),
-	conversationController = require('../controllers/ConversationController.js');
+	conversationController = require('../controllers/conversationController.js');
 
 
 router.post('/', (req, res) => {

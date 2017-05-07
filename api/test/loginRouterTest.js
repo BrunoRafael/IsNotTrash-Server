@@ -6,7 +6,7 @@ var mongoose = require('mongoose'),
   assert = require('chai').assert,
   jwt = require('jsonwebtoken'),
   config = require('../../config/config'),
-  User = require('../models/UserModel.js'),
+  User = require('../models/userModel.js'),
   dbURI = config.mongo_uri.test,
   clearDB = require('mocha-mongoose')(dbURI, {
     noClear: true

@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
-var userController = require('../controllers/UserController.js');
+var userController = require('../controllers/userController.js');
 var validator = require('validator');
 var url = require('url');
 
@@ -132,6 +131,22 @@ router.put('/finalized/promotions', function(req, res) {
         }
     );
 });
+/*Rota que retorna as promoções não finalizadas*/
+router.put('/vibration', function(req, res) {
+
+    var vibration = req.body.vibration;
+
+    userController.updateVibrationSettings(req.userInformations._id, vibration,
+        //returns promotions - finalized promotions
+        function(resp) {
+            res.status(200).send(resp.content.data);
+        },
+        function(exception) {
+            res.status(400).send(exception);
+        }
+    );
+});
+
 
 /*Rota que deleta um usuário*/
 router.delete('/:id', function(req, res) {

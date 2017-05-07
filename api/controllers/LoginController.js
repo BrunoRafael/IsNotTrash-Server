@@ -1,7 +1,8 @@
 var jwt = require('jsonwebtoken'),
   config = require('../../config/config'),
-  User = require('../models/UserModel.js');
-Establishment = require('../models/EstablishmentModel.js');
+  User = require('../models/userModel.js');
+Establishment = require('../models/establishmentModel.js');
+var mongoose = require('mongoose');
 
 exports.login = function (email, password, callback) {
   User.findOne({
@@ -26,7 +27,6 @@ exports.login = function (email, password, callback) {
       user.passwordVerification(password, function (ismatch) {
 
         if (ismatch) {
-
           var userInformations = {
             name: user.name,
             email: user.email,

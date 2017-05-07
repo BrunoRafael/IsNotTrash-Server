@@ -1,5 +1,5 @@
-var User = require('../models/UserModel.js');
-var promotionController = require('./PromotionController.js');
+var User = require('../models/userModel.js');
+var promotionController = require('./promotionController.js');
 var cloudinary = require('cloudinary');
 
 exports.list = (resolve, reject) => {
@@ -190,6 +190,44 @@ exports.updateFinalizedPromotions = function(user_id, removeFinishPromotions, re
     });
 };
 
+exports.updateVibrationSettings = function(user_id, vibration, resolve, reject){
+    User.update({
+        _id: user_id
+    }, {
+        $set: {
+            'settings.vibration': vibration
+        }
+    },function(error) {
+        if (error) {
+            reject({
+                content: {
+                    success: false,
+                    data: error
+                }
+            });
+            console.log(error);
+        } else {
+            promotionController.listByPage(0, 10, user_id, vibration, null,
+                function(promotions){
+                    resolve({
+                        content: {
+                            success: true,
+                            data: promotions
+                        }
+                    })
+                }, function(error){
+                    reject({
+                        content: {
+                            success: false,
+                            data: error
+                        }
+                    })
+                }
+            );
+        }
+    });
+};
+
 exports.updateName = (id, name, resolve, reject) => {
 
     var selection = {
@@ -359,5 +397,17 @@ exports.findUserByEmail = function(email, resolve, reject) {
         } else {
             resolve(user);
         }
+    });
+};
+
+exports.find = function(conditions, callback){
+    User.find(conditions).exec(function(error, users){
+        var result = {
+            content: { data: users, success: true }
+        };
+        if(error){
+            result.content.success = false;
+        }
+        callback(result);
     });
 };

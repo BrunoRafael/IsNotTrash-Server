@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
-	Establishment = require('./EstablishmentModel.js');
+	Establishment = require('./establishmentModel.js');
 
 var promotionsSchema = new Schema({
 	_company: {
@@ -8,6 +8,7 @@ var promotionsSchema = new Schema({
 		ref: 'Establishment'
 	},
 	productName: String,
+	productType: String,
 	price: {
 		unit: String,
 		actual: Number,
@@ -21,12 +22,12 @@ var promotionsSchema = new Schema({
 	description: String,
 	images: [String],
 	evaluates: {
-		user_likes: [mongoose.Schema.Types.ObjectId],
-		comments: [{
-			type: Schema.ObjectId,
-			ref: 'Comment'
-		}]
-	}
+		user_likes: [mongoose.Schema.Types.ObjectId]
+	},
+	mark_as_favorite: [{
+		type: Schema.ObjectId,
+		ref: 'User'
+	}]
 });
 
 module.exports = mongoose.model('Promotion', promotionsSchema);

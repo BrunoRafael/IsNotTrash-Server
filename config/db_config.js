@@ -1,6 +1,6 @@
 var config = require("./config");
 var mongoose = require('mongoose');
-var InsertDataInDb = require('../script/InsertDataInDB.js');
+var InsertDataInDb = require('../script/insertDataInDB.js');
 var url_conn = '';
 
 var restartDb = true;
@@ -15,7 +15,7 @@ if (process.env.PORT) {
 
 var db = mongoose.connection;
 
-if(restartDb){
+if(restartDb && process.env.NODE_ENV != 'test'){
 	InsertDataInDb.startDataBase();
 }
 

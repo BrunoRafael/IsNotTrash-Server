@@ -3,15 +3,16 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var cloudinary = require('cloudinary');
+var WebSocket = require('../api/resources/web_socket/WebSocket.js');
 
 var app = module.exports = express();
 
 var server = require('http').createServer(app);
-var io = require('../api/resources/web_socket/WebSocket.js');
+var io = WebSocket.io;
 
 /*Serviço rodando na porta 1337*/
 var ip = process.env.IP || 'localhost';
-var port = process.env.PORT || 3080;
+var port = process.env.PORT || 1337;
 
 server.listen(port, () => {
 	console.log('App is running on http://' + ip + ':' + port);
@@ -31,7 +32,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 cloudinary.config({
-	cloud_name: 'dzoh8hohb',
-	api_key: '829153973922911',
-	api_secret: 'qB0FeKdsbGhwXh87BOo44_fjyPM'
+	cloud_name: 'hy1uaykrf',
+	api_key: '171589611641968',
+	api_secret: 'HyPFcyKPXN408-Th8EaaHHNufSw'
 });

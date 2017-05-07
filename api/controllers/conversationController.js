@@ -1,12 +1,12 @@
 var config = require('../../config/config'),
-    Conversation = require('../models/chat/ConversationModel.js'),
+    Conversation = require('../models/conversationModel.js'),
     utils = require('../../Utils.js');
 
-exports.saveMessage = (estab, user, text, date, whoSent, result) => {
+exports.saveMessage = (user, estab, text, date, whoSent, result) => {
 
     var conditions = {
-        estab: estab,
-        user: user
+        user: user,
+        estab: estab
     };
 
     var update = {

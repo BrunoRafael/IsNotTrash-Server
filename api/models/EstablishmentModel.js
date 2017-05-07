@@ -45,6 +45,10 @@ var establishmentSchema = new Schema({
         type : Number,
         default: 0
     },
+    rank: {
+        type : String,
+        default: "Bronze"
+    },
     address: {
         street: {
             type: String,
@@ -70,13 +74,6 @@ var establishmentSchema = new Schema({
             type: String,
             required: true
         }
-    },
-    rank: {
-        position: {
-            type : Number,
-            default: 0
-        },
-        rank: []
     }
 });
 

@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "sudo NODE_ENV=test ./node_modules/.bin/mocha test/"
+    "test": "sudo NODE_ENV=test ./node_modules/.bin/mocha ./api/test/chatTest.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/BrunoRafael/isNotTrash-server/issues"
   },
-
   "homepage": "https://github.com/BrunoRafael/isNotTrash-server#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -25,11 +24,13 @@
     "cors": "2.7.1",
     "express": "4.13.4",
     "find": "0.2.4",
+    "generate-pincode": "^3.0.1",
     "gulp": "~3.9.x",
     "gulp-concat": "~2.2.0",
     "gulp-minify-css": "~0.3.0",
     "gulp-rename": "~1.2.0",
     "gulp-sass": "~2.0.4",
+    "hashids": "^1.1.0",
     "jsonwebtoken": "5.7.0",
     "mocha-mongoose": "1.1.1",
     "mongodb": "2.1.16",
@@ -39,6 +40,8 @@
     "nodemailer": "2.2.1",
     "nodemon": "1.9.1",
     "path": "0.12.7",
+    "sendgrid": "^3.0.11",
+    "sendgrid-rest": "^2.2.1",
     "socket.io": "1.4.5",
     "validator": "4.6.1"
   },
@@ -46,14 +49,13 @@
     "node": "4.2.2"
   },
   "devDependencies": {
-    "chai": "3.5.0",
+    "chai": "^3.5.0",
     "chai-http": "2.0.1",
-    "mocha": "2.4.5",
-    "mocha-mongoose": "1.1.1",
+    "gulp-util": "~2.2.14",
+    "mocha": "^2.5.3",
+    "shelljs": "~0.3.0",
     "should": "8.2.2",
     "superagent": "1.7.2",
-    "supertest": "1.2.0",
-    "gulp-util": "~2.2.14",
-    "shelljs": "~0.3.0"
+    "supertest": "1.2.0"
   }
 }

@@ -1,10 +1,9 @@
 var express = require('express');
 var validator = require('validator');
-var userController = require('../controllers/UserController.js');
-var establishmentController = require('../controllers/EstablishmentController.js');
+var userController = require('../controllers/userController.js');
+var establishmentController = require('../controllers/establishmentController.js');
 var router = express.Router();
-
-var loginController = require('../controllers/LoginController.js');
+var loginController = require('../controllers/loginController.js');
 
 router.post('/', function(req, res){
 

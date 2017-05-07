@@ -13,6 +13,7 @@ function auth(req, res, next) {
 					message: 'Failed to authenticate token.'
 				});
 			} else {
+			console.log("UI " + userInformations);
 				req.userInformations = userInformations;
 				next();
 			}

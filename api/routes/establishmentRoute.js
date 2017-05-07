@@ -1,6 +1,6 @@
 var express = require('express'),
   router = express.Router(),
-  establishmentController = require('../controllers/EstablishmentController.js'),
+  establishmentController = require('../controllers/establishmentController.js'),
   validator = require('validator');
 
 router.get('/', (req, res) => {
