@@ -5,13 +5,13 @@ var url_conn = '';
 
 var restartDb = true;
 
-if (process.env.PORT) {
+/*if (process.env.PORT) {
 	mongoose.connect(config.mongo_uri.heroku);
 } else if (process.env.NODE_ENV == 'test') {
 	mongoose.connect(config.mongo_uri.test);
-} else {
+} else {*/
 	mongoose.connect(config.mongo_uri.dev);
-}
+//}
 
 var db = mongoose.connection;
 
