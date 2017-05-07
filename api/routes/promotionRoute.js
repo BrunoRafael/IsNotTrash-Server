@@ -4,7 +4,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
 
-var PromotionController = require('../controllers/promotionController.js');
+var PromotionController = require('../controllers/PromotionController.js');
 var GeneratorManager = require('../resources/generator/GeneratorManager.js');
 var validator = require('validator');
 
