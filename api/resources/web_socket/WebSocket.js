@@ -3,7 +3,7 @@
  */
 var socket_io = require("socket.io");
 var io = socket_io();
-var promotionController = require('../../controllers/promotionController.js');
+var promotionController = require('../../controllers/PromotionController.js');
 var validator = require('validator');
 var jwt = require('jsonwebtoken');
 var config = require('../../../config/config');
