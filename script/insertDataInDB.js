@@ -1,7 +1,7 @@
 var Promotion =require('../api/models/promotionModel.js'),
     Hint =require('../api/models/HintModel.js'),
-    User = require('../api/models/userModel.js'),
-    Establishment = require('../api/models/establishmentModel.js');
+    User = require('../api/models/UserModel.js'),
+    Establishment = require('../api/models/EstablishmentModel.js');
 
 var promotions = [
   {

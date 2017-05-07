@@ -5,7 +5,7 @@ var chaiHttp = require('chai-http');
 var server = require('../app');
 var should = chai.should();
 
-var User = require("../api/models/userModel");
+var User = require("../api/models/UserModel");
 
 chai.use(chaiHttp);
 

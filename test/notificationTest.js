@@ -7,7 +7,7 @@ var should = chai.should();
 var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
 var Notification = require("../api/models/notificationModel");
-var User = require("../api/models/userModel");
+var User = require("../api/models/UserModel");
 var LoginController = require("../api/controllers/loginController");
 
 chai.use(chaiHttp);
