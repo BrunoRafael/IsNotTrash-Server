@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
-	Establishment = require('./establishmentModel.js');
+	Establishment = require('./EstablishmentModel.js');
 
 var promotionsSchema = new Schema({
 	_company: {
