@@ -4,7 +4,7 @@ var router = express.Router();
 var validator = require('validator');
 var nodemailer = require('nodemailer');
 
-var userController = require('../api/controllers/userController.js');
+var userController = require('../api/controllers/UserController.js');
 
 var self = this;
 
