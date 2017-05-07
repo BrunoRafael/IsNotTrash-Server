@@ -1,5 +1,5 @@
 var timeout = require('../resources/timeout/timeout.js'),
-	Promotion = require('../models/PromotionModel.js'),
+	Promotion = require('../models/promotionModel.js'),
 	Comment = require('../models/CommentModel.js'),
 	User = require('../models/UserModel.js'),
 	Establishment = require('../models/EstablishmentModel.js'),
