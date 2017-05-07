@@ -1,4 +1,4 @@
-var User = require('../models/userModel.js');
+var User = require('../models/UserModel.js');
 var promotionController = require('./promotionController.js');
 var cloudinary = require('cloudinary');
 

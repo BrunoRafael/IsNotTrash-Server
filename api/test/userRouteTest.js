@@ -7,7 +7,7 @@ var config = require("../../config/config"),
   expect = chai.expect,
   app = require('../../app'),
   agent = request.agent(app),
-  User = require('../models/userModel.js'),
+  User = require('../models/UserModel.js'),
   dbURI = config.mongo_uri.test,
   clearDB = require('mocha-mongoose')(dbURI, {
     noClear: true

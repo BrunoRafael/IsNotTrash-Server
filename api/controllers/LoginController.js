@@ -1,7 +1,7 @@
 var jwt = require('jsonwebtoken'),
   config = require('../../config/config'),
-  User = require('../models/userModel.js');
-Establishment = require('../models/establishmentModel.js');
+  User = require('../models/UserModel.js');
+Establishment = require('../models/EstablishmentModel.js');
 var mongoose = require('mongoose');
 
 exports.login = function (email, password, callback) {

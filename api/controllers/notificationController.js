@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
     Notification = require('../models/notificationModel.js'),
-    Establishment = require('../models/establishmentModel.js');
+    Establishment = require('../models/EstablishmentModel.js');
 
 exports.save = function (type, info, user, result) {
 

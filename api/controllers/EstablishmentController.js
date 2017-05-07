@@ -1,7 +1,7 @@
 'use strict';
 
 var config = require('../../config/config'),
-    Establishment = require('../models/establishmentModel.js'),
+    Establishment = require('../models/EstablishmentModel.js'),
     Promotions = require('../models/promotionModel.js'),
     utils = require('../../Utils.js'),
     cloudinary = require('cloudinary');
