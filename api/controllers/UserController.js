@@ -324,8 +324,7 @@ function unescapeHtml(unsafe) {
 
 exports.updatePhoto = (id, photo, resolve, reject) => {
     var image = unescapeHtml(photo);
-    console.log(image);
-    
+    console.log("Image URL : " + image);
     cloudinary.uploader.upload(image, function(result) {
         var selection = {
             "_id": id
@@ -351,7 +350,7 @@ exports.updatePhoto = (id, photo, resolve, reject) => {
                 });
             }
         });
-    });
+    }, {public_id:id});
 };
 
 exports.delete = (id, resolve, reject) => {

@@ -26,13 +26,13 @@ if (process.env.NODE_ENV === 'dev') {
 	app.use(logger('dev'));
 }
 
-app.use(bodyParser.json({limit: '5mb'}));
+app.use(bodyParser.json({limit: '1mb'}));
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
 
 cloudinary.config({
-	cloud_name: 'hy1uaykrf',
-	api_key: '171589611641968',
-	api_secret: 'HyPFcyKPXN408-Th8EaaHHNufSw'
+	cloud_name: 'isnottrash',
+	api_key: '831296185385192',
+	api_secret: '6bXalZQcWjEo0Gk7ExuoGEkKLoo'
 });

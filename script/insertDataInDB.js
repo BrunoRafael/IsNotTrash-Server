@@ -77,7 +77,7 @@ var promotions = [
       email: 'cascatadevento@mail.com',
       password: '123456',
       subtitle: 'Doces e salgados pelo melhor preço',
-      imageUrl: 'http://www.doceriafantasias.com.br/wp-content/files_flutter/1266844263home-1.jpg',
+      imageUrl: 'http://4.bp.blogspot.com/-nr-UGC32sho/UjY4EecKo7I/AAAAAAAAABM/oOGGxJi9Wp0/s1600/Logo.png',
       type: 'Doceria',
       cnpj: '566965633',
       phones: ['83992069565', '83332102258'],
@@ -98,7 +98,7 @@ var promotions = [
         email: 'queromais@mail.com',
         password: '123456',
         subtitle: 'Quanto mais você compra mais você quer',
-        imageUrl:'http://www.vivoseudinheiro.com.br/libs/uploads/2015/07/seudinheiro-Compras-de-supermercado-635x423.jpg',
+        imageUrl:'http://www.giromarilia.com.br/img/news/amor-no-carrinho_1467813547.jpg',
         type:'Supermercado',
         cnpj:'5233669874',
         likes: undefined,
@@ -118,7 +118,7 @@ var promotions = [
           email: 'daguia@mail.com',
           password: '123456',
           subtitle: 'Guiando você para o melhor',
-          imageUrl: 'http://www.mercadotododia.com.br/wp-content/uploads/2015/02/shutterstock_140952511.jpg',
+          imageUrl: 'https://www.proteste.org.br/-/media/1,-d-,global-artwork/family/supermarkets/supermarkets.svg',
           type: 'Supermercado',
           cnpj: '52336541',
           likes: undefined,
@@ -146,8 +146,8 @@ var promotions = [
       removeFinishPromotions: undefined
     }
   }, {
-      name: 'Diego Augusto Moura de Oliveira',
-      email: 'daugustomoura@gmail.com',
+      name: 'Rafael de Carlos Pereira Silva',
+      email: 'rafael@mail.com',
       password: '123456',
       phone: '83999415698',
       photo: undefined,
