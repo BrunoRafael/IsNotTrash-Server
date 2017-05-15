@@ -31,7 +31,7 @@ function addAutomaticHint() {
                 }
             );
         });
-    }, 3600000)
+    }, 36000)
 }
 addAutomaticHint();
 
