@@ -167,7 +167,7 @@ function addAutomaticPromotions(){
             addPromotion(promotion);
 
         });
-    }, 36000);
+    }, 3600000);
 
 }
 
