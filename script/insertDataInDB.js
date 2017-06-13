@@ -112,20 +112,20 @@ var promotions = [
         }
       },
         {
-          name: 'Supermercado ideal',
-          email: 'ideal_supermercados@mail.com',
+          name: 'Supermercado Rede compras',
+          email: 'redecompras_supermercados@mail.com',
           password: '123456',
           subtitle: 'O melhor preço da cidade!',
-          imageUrl: 'http://www.supermercadosideal.com.br/imagens/logotipo-footer.png',
+          imageUrl: 'https://pbs.twimg.com/profile_images/710526238251737089/vH8S-iOP.jpg',
           type: 'Supermercado',
           cnpj: '12345678',
           likes: undefined,
           totalNumberOfPublications: 0,
           phones: ['83982069565', '8333002258'],
           address: {
-            street: 'R. Vigolvino Vanderlei',
-            neighborhood: 'Conceição',
-            number: 290,
+            street: 'R. JOão Lourenço Porto',
+            neighborhood: 'Centro',
+            number: 374,
             cep: 58401-311,
             city: 'Campina Grande',
             uf: 'PB'
