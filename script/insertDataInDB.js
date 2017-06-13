@@ -5,68 +5,65 @@ var Promotion =require('../api/models/promotionModel.js'),
 
 var promotions = [
   {
-    _company: null, productName: 'Batatas granfinas',
-    productType: 'Batatas',
-    price: { unit: 'kg', actual: 2.50, old: 4.80 },
-    startDate: 1476478951910,
-    endDate: 1477342951910,
-    reason: 'Danificação',
-    shelf_life: 1508878951910,
+    _company: null,
+    productName: 'Cerveja Itaipava 550ML',
+    productType: 'Bebidas',
+    price: { unit: 'Unidade', actual: 5, old: 7},
+    startDate: 1497352835668,
+    endDate: 1500722327034,
+    reason: 'Vencimento',
+    shelf_life: 1503919127034,
     conservation: 'Natural',
-    images: ['http://climatologiageografica.com.br/wp-content/uploads/2015/05/1.jpg'],
+    images: ['http://recursos.decisaoentrega.com.br/Imagem/Produto/420/435650-3/cerveja-itaipava-latao-473ml-267824.jpg?v=20170612_05'],
     evaluates: {
-      user_likes: [],
-      comments: []
+      user_likes: []
     }
   },
   {
     _company: null,
-    productName: 'Maçãs',
-    productType: 'Maçãs',
-    price: { unit: 'kg', actual: 3.80, old: 5.80 },
-    startDate: 1465938685451,
-    endDate: 1466802633300,
+    productName: 'Caixa de morangos',
+    productType: 'Frutas',
+    price: { unit: 'Caixa', actual: 4.99, old: 9.80},
+    startDate: 1497352835668,
+    endDate: 1496834579823,
     reason: 'Danificação',
-    shelf_life: 1466975581209,
+    shelf_life: 1497007401651,
     conservation: 'Natural',
-    images: ['http://remediodaterra.com.br/wp-content/uploads/2015/08/Ma%C3%A7%C3%A3-benef%C3%ADcios-e-propriedades-ma%C3%A7%C3%A3s-verdes-e-vermelhas.jpg'],
+    images: ['http://www.dicademusculacao.com.br/wp-content/uploads/2015/03/Morango.jpg'],
     evaluates: {
-      user_likes: [],
-      comments: []
-    }
-  },
-
-  {
-    _company: null,
-    productName: 'Maçã Verde',
-    productType: 'Maçãs',
-    price: { unit: 'kg', actual: 3.80, old: 5.80 },
-    startDate: 1465938685451,
-    endDate: 1466802633390,
-    reason: 'Danificação',
-    shelf_life: 1466975581209,
-    conservation: 'Natural',
-    images: ['http://vivomaissaudavel.com.br/static/media/uploads/maca-verde.jpg'],
-    evaluates: {
-      user_likes: [],
-      comments: []
+      user_likes: []
     }
   },
 
   {
     _company: null,
-    productName: 'Suco de caixa del Valle',
-    productType: 'Suco',
-    price: { unit: 'kg', actual: 1.80, old: 3.80 },
-    startDate: 1466284790583,
-    endDate: 1466543990583,
-    reason: 'Validade',
-    shelf_life: 1466803190583,
-    conservation: 'Refrigeração',
-    images: ['http://www.extraplus.com.br/media/W1siZiIsIjIwMTIvMDgvMDEvMDhfMjhfMDFfNjc4XzI1ODA5OF9CZWJpZGFfS2Fwb19Nb3JhbmdvXzIwMG1sLmpwZyJdXQ/258098-Bebida-Kapo-Morango-200ml.jpg'],
+    productName: 'Leite Molico',
+    productType: 'Leite',
+    price: { unit: 'Unidade', actual:10.99 , old: 19.99},
+    startDate: 1497353460663,
+    endDate: 1499859060663,
+    reason: 'Vencimento',
+    shelf_life: 1502969460663,
+    conservation: 'Natural',
+    images: ['https://3.bp.blogspot.com/-AvdlyDPkIto/V1jdrdjpMbI/AAAAAAAAkFs/aB7a9D08sWQnC88C1dQ7YofSb6w78N2KgCKgB/s1600/bbb%2B200%2Bl.jpg'],
     evaluates: {
-      user_likes: [],
-      comments: []
+      user_likes: []
+    }
+  },
+
+  {
+    _company: null,
+    productName: 'Picanha bovina',
+    productType: 'Perecíveis',
+    price: { unit: 'Kg', actual:18.40, old: 25.90},
+    startDate: 1497353460663,
+    endDate: 1496835605730,
+    reason: 'Promoção',
+    shelf_life: 1497094805730,
+    conservation: 'Congelado',
+    images: ['http://mambo.vteximg.com.br/arquivos/ids/176492-1000-1000/194901_24571.jpg'],
+    evaluates: {
+      user_likes: []
     }
   }
 
@@ -93,42 +90,22 @@ var promotions = [
         rank: 0
       }
     },
-
-      {name: 'Supermercado quero mais',
-        email: 'queromais@mail.com',
-        password: '123456',
-        subtitle: 'Quanto mais você compra mais você quer',
-        imageUrl:'http://www.giromarilia.com.br/img/news/amor-no-carrinho_1467813547.jpg',
-        type:'Supermercado',
-        cnpj:'5233669874',
-        likes: undefined,
-        phones: ['83910069565','8333442258'],
-        totalNumberOfPublications: 0,
-        address: {
-          street: 'Rua João de Deus',
-          neighborhood: 'Centro',
-          number: 120,
-          cep: 50221400,
-          city: 'Campina Grande',
-          uf: 'PB'
-        }
-      },
         {
-          name: 'Rede de suspermercados da guia',
-          email: 'daguia@mail.com',
+          name: 'Supermercado ideal',
+          email: 'ideal_supermercados@mail.com',
           password: '123456',
-          subtitle: 'Guiando você para o melhor',
-          imageUrl: 'https://www.proteste.org.br/-/media/1,-d-,global-artwork/family/supermarkets/supermarkets.svg',
+          subtitle: '',
+          imageUrl: 'http://www.supermercadosideal.com.br/imagens/logotipo-footer.png',
           type: 'Supermercado',
-          cnpj: '52336541',
+          cnpj: '12345678',
           likes: undefined,
           totalNumberOfPublications: 0,
           phones: ['83982069565', '8333002258'],
           address: {
-            street: 'Rua dez de Dezembro',
-            neighborhood: 'Catolé',
-            number: 1622,
-            cep: 500021411,
+            street: 'R. Vigolvino Vanderlei',
+            neighborhood: 'Conceição',
+            number: 290,
+            cep: 58401-311,
             city: 'Campina Grande',
             uf: 'PB'
           }

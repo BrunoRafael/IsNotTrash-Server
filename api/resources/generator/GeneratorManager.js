@@ -7,15 +7,15 @@ var mongoose = require('mongoose');
 var promotions = [
     {
         _company: null,
-        productName: 'Batatas granfinas',
-        productType: 'Batatas',
-        price: { unit: 'kg', actual: 2.50, old: 4.80},
-        startDate: 1494864834305,
-        endDate: 1500135128237,
-        reason: 'Danificação',
-        shelf_life: 1500135128237,
+        productName: 'Cerveja Itaipava 550ML',
+        productType: 'Bebidas',
+        price: { unit: 'Unidade', actual: 5, old: 7},
+        startDate: 1497352835668,
+        endDate: 1500722327034,
+        reason: 'Vencimento',
+        shelf_life: 1503919127034,
         conservation: 'Natural',
-        images: ['http://marianakalil.com.br/wp-content/uploads/2016/05/batata_doce.jpg'],
+        images: ['http://recursos.decisaoentrega.com.br/Imagem/Produto/420/435650-3/cerveja-itaipava-latao-473ml-267824.jpg?v=20170612_05'],
         evaluates: {
             user_likes: []
         }
@@ -23,15 +23,15 @@ var promotions = [
 
     {
         _company: null,
-        productName: 'Feijão Biju',
-        productType: 'Feijão Macassar',
-        price: { unit: 'kg', actual: 3.50, old: 7.80},
-        startDate: 1470363613221,
-        endDate: 1471400413221,
+        productName: 'Caixa de morangos',
+        productType: 'Frutas',
+        price: { unit: 'Caixa', actual: 4.99, old: 9.80},
+        startDate: 1497352835668,
+        endDate: 1496834579823,
         reason: 'Danificação',
-        shelf_life: 1472610013221,
+        shelf_life: 1497007401651,
         conservation: 'Natural',
-        images: ['http://www.meubiju.com/assets/img/produtos/produto-feijao.png'],
+        images: ['http://www.dicademusculacao.com.br/wp-content/uploads/2015/03/Morango.jpg'],
         evaluates: {
             user_likes: []
         }
@@ -39,13 +39,13 @@ var promotions = [
 
     {
         _company: null,
-        productName: 'Feijão Biju',
-        productType: 'Feijão macassar',
-        price: { unit: 'kg', actual: 5.50, old: 8.80},
-        startDate: 1470363613221,
-        endDate: 1471400413221,
-        reason: 'Danificação',
-        shelf_life: 1472610013221,
+        productName: 'Leite Molico',
+        productType: 'Leite',
+        price: { unit: 'Unidade', actual:10.99 , old: 19.99},
+        startDate: 1497353460663,
+        endDate: 1499859060663,
+        reason: 'Vencimento',
+        shelf_life: 1502969460663,
         conservation: 'Natural',
         images: ['https://3.bp.blogspot.com/-AvdlyDPkIto/V1jdrdjpMbI/AAAAAAAAkFs/aB7a9D08sWQnC88C1dQ7YofSb6w78N2KgCKgB/s1600/bbb%2B200%2Bl.jpg'],
         evaluates: {
@@ -55,31 +55,15 @@ var promotions = [
 
     {
         _company: null,
-        productName: 'Morangos do nordeste',
-        productType: 'Morangos',
-        price: { unit: 'kg', actual: 14.50, old: 22.80},
-        startDate: 1494864834305,
+        productName: 'Shampoo + condicionador Pantene',
+        productType: 'Beleza',
+        price: { unit: 'Caixa', actual: 14.50, old: 18.99},
+        startDate: 1497353460663,
         endDate: 1500135128237,
-        reason: 'Descarte',
-        shelf_life: 1472610013221,
-        conservation: 'Temperatura baixa',
-        images: ['http://www.papeldeparede.etc.br/fotos/wp-content/uploads/morangos.jpg'],
-        evaluates: {
-            user_likes: []
-        }
-    },
-
-    {
-        _company: null,
-        productName: 'Paçoquitas',
-        productType: 'Paçoca',
-        price: { unit: 'Cx', actual: 5.50, old: 9.90},
-        startDate: 1494864834305,
-        endDate: 1500135128237,
-        reason: 'Vencimento',
-        shelf_life: 1472610013221,
+        reason: 'Promoção',
+        shelf_life: 1502797260279,
         conservation: 'Natural',
-        images: ['http://www.pacoquita.com.br/upload/products/large/AF_3D_PACOQUITA_POTE_ROLHA_125KG_AJ1.jpg'],
+        images: ['http://smredemais.com.br/admin/Produtos/Facebook/60647ebbe3e0e38dc0aab0951da79cf2.png'],
         evaluates: {
             user_likes: []
         }
@@ -87,15 +71,31 @@ var promotions = [
 
     {
         _company: null,
-        productName: 'Feijão macassar turquesa',
-        productType: 'Feijão macassar',
-        price: { unit: 'kg', actual: 4.80, old: 10},
-        startDate: 1470363613221,
+        productName: 'Picanha bovina',
+        productType: 'Perecíveis',
+        price: { unit: 'Kg', actual:18.40, old: 25.90},
+        startDate: 1497353460663,
+        endDate: 1496835605730,
+        reason: 'Promoção',
+        shelf_life: 1497094805730,
+        conservation: 'Congelado',
+        images: ['http://mambo.vteximg.com.br/arquivos/ids/176492-1000-1000/194901_24571.jpg'],
+        evaluates: {
+            user_likes: []
+        }
+    },
+
+    {
+        _company: null,
+        productName: 'Carne suína',
+        productType: 'Perecíveis',
+        price: { unit: 'kg', actual: 12.99, old: 15.99},
+        startDate: 1497353460663,
         endDate: 1471400413221,
         reason: 'Danificação',
         shelf_life: 1472610013221,
-        conservation: 'Natural',
-        images: ['http://mercadoexpress.loja2.com.br/img/16c2b9ceb3a5bf9dee85d0ee70dcc2ee.jpg'],
+        conservation: 'Congelado',
+        images: ['http://nutribrasalimentos.com.br/wp-content/uploads/2015/12/produto_in-natura.png'],
         evaluates: {
             user_likes: []
         }
@@ -104,9 +104,9 @@ var promotions = [
     {
         _company: null,
         productName: 'Coca cola 2 litros',
-        productType: 'Coca cola',
+        productType: 'Bebidas',
         price: { unit: '6 unid', actual: 19.70, old: 30},
-        startDate: 1494864834305,
+        startDate: 1497353460663,
         endDate: 1500135128237,
         reason: 'Data de validade',
         shelf_life: 1477534813221,
@@ -120,12 +120,12 @@ var promotions = [
     {
         _company: null,
         productName: 'Biscoito recheado bono',
-        productType: 'Biscoito recheado',
-        price: { unit: 'unid', actual: 1.00, old: 2.10},
-        startDate: 1494864834305,
-        endDate: 1500135128237,
+        productType: 'Biscoitos',
+        price: { unit: 'Caixa', actual: 35.99, old: 55.99},
+        startDate: 1497353460663,
+        endDate: 1503316128711,
         reason: 'Data de validade',
-        shelf_life: 1477534813221,
+        shelf_life: 1508759328711,
         conservation: 'Natural',
         images: ['http://www.arrumeolaco.com/wp-content/uploads/2015/02/Biscoito-Bono.jpg'],
         evaluates: {
@@ -138,7 +138,7 @@ var promotions = [
         productName: 'Torta de chocolate com morango',
         productType: 'Torta',
         price: { unit: 'kg', actual: 19.90, old: 28.70},
-        startDate: 1473992413221,
+        startDate: 1497353460663,
         endDate: 1475634013221,
         reason: 'Danificação',
         shelf_life: 1479349213221,
@@ -151,81 +151,15 @@ var promotions = [
 
     {
         _company: null,
-        productName: 'Alfaces',
-        productType: 'Alface',
-        price: { unit: 'kg', actual: 1.20, old: 2.95},
-        startDate: 1473992413221,
-        endDate: 1475634013221,
+        productName: 'Refrigerante Sprite lata 350ML',
+        productType: 'Bebidas',
+        price: { unit: 'unid', actual: 0.99, old: 3.99},
+        startDate: 1497353460663,
+        endDate: 1500291946988,
         reason: 'Danificação',
-        shelf_life: 1479349213221,
+        shelf_life: 1502970346988,
         conservation: 'Natural',
-        images: ['http://www.casacamponesa.com.br/sites/default/files/produtos/alface-crespa.jpg'],
-        evaluates: {
-            user_likes: []
-        }
-    },
-
-    {
-        _company: null,
-        productName: 'Bananas pacovã',
-        productType: 'Bananas',
-        price: { unit: 'kg', actual: 2.50, old: 4.80},
-        startDate: 1473992413221,
-        endDate: 1475634013221,
-        reason: 'Danificação',
-        shelf_life: 1479349213221,
-        conservation: 'Natural',
-        images: ['http://www.agronovas.com.br/wp-content/uploads/2016/01/o-BANANA-facebook.jpg'],
-        evaluates: {
-            user_likes: []
-        }
-    },
-
-    {
-        _company: null,
-        productName: 'Berinjelas do agreste',
-        productType: 'Berinjela',
-        price: { unit: 'unid', actual: 1.20, old: 2.70},
-        startDate: 1473992413221,
-        endDate: 1475634013221,
-        reason: 'Danificação',
-        shelf_life: 1479349213221,
-        conservation: 'Natural',
-        images: ["http://emagrecimentourgente.com/wp-content/uploads/2014/04/Agua-de-berinjela-emagrece.jpg"],
-        evaluates: {
-            user_likes: []
-        }
-    },
-
-    {
-        _company: null,
-        productName: 'Pipocas de microondas yoki natural',
-        productType: 'Pipocas de microondas',
-        price: { unit: 'unid', actual: 0.85, old: 1.30},
-        startDate: 1473992413221,
-        endDate: 1475634013221,
-        reason: 'Data de validade',
-        shelf_life: 1479349213221,
-        favorite: false,
-        conservation: 'Natural',
-        images: ["http://yoki.com.br/wp-content/uploads/2015/05/popcorn-sabor-natural-hero.jpg"],
-        evaluates: {
-            user_likes: []
-        }
-    },
-
-    {
-        _company: null,
-        productName: 'Suco natural de menta com abacaxi',
-        productType: 'Suco',
-        price: {unit: 'unid', actual: 2.50, old: 4.80},
-        startDate: 1473992413221,
-        endDate: 1475634013221,
-        reason: 'Danificação das frutas',
-        shelf_life: 1479349213221,
-        favorite: false,
-        conservation: 'Natural',
-        images: ["http://media.aguadoce.com.br/uploads/receitas/foto_receita/ao-suco-refrescant_jpg_521x270_crop_upscale_q85.jpg"],
+        images: ["https://cdn.awsli.com.br/300x300/183/183316/produto/5390885/2bdb9c42fd.jpg"],
         evaluates: {
             user_likes: []
         }
