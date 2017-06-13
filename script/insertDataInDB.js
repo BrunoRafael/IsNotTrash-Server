@@ -117,7 +117,7 @@ var promotions = [
           name: 'Supermercado ideal',
           email: 'ideal_supermercados@mail.com',
           password: '123456',
-          subtitle: '',
+          subtitle: 'O melhor preço da cidade!',
           imageUrl: 'http://www.supermercadosideal.com.br/imagens/logotipo-footer.png',
           type: 'Supermercado',
           cnpj: '12345678',
