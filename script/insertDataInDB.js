@@ -46,7 +46,7 @@ var promotions = [
     reason: 'Vencimento',
     shelf_life: 1502969460663,
     conservation: 'Natural',
-    images: ['https://3.bp.blogspot.com/-AvdlyDPkIto/V1jdrdjpMbI/AAAAAAAAkFs/aB7a9D08sWQnC88C1dQ7YofSb6w78N2KgCKgB/s1600/bbb%2B200%2Bl.jpg'],
+    images: ['http://dilettocafe.com.br/wp-content/uploads/2015/09/LEITE-MOLICO.jpg'],
     evaluates: {
       user_likes: []
     }
