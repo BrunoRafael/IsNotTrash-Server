@@ -208,7 +208,7 @@ function addPromotions() {
   Establishment.find({}, function (err, documents) {
     for (var i in promotions) {
       var promotion = new Promotion(promotions[i]);
-      promotion._company = documents[i % 3]._id;
+      promotion._company = documents[i % 2]._id;
       promotion.save(function (err, savedDocument) {
         if (err) {
           throw err;
