@@ -155,7 +155,7 @@ router.post('/history', function(req, res) {
     });
 });
 
-function addAutomaticPromotions(){
+/*function addAutomaticPromotions(){
     setInterval(function(){
         Establishment.find({}, function(err, documents) {
             var promotion = GeneratorManager.generatePromotion();
@@ -171,6 +171,6 @@ function addAutomaticPromotions(){
 
 }
 
-addAutomaticPromotions();
+addAutomaticPromotions();*/
 
 module.exports = router;

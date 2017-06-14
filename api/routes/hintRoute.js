@@ -18,7 +18,7 @@ router.post('/', function(req, res){
         }
     })
 });
-function addAutomaticHint() {
+/*function addAutomaticHint() {
     setInterval(function () {
         var hint = GeneratorManager.generateHint();
         Establishment.find({}, function(err, documents) {
@@ -33,6 +33,6 @@ function addAutomaticHint() {
         });
     }, 3600000)
 }
-addAutomaticHint();
+addAutomaticHint();*/
 
 module.exports = router;
