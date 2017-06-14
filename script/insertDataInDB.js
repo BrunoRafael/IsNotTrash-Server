@@ -6,63 +6,57 @@ var Promotion =require('../api/models/promotionModel.js'),
 var promotions = [
   {
     _company: null,
-    productName: 'Cerveja Itaipava 550ML',
-    productType: 'Bebidas',
-    price: { unit: 'Unidade', actual: 5, old: 7},
-    startDate: 1497352835668,
-    endDate: 1500722327034,
-    reason: 'Vencimento',
-    shelf_life: 1503919127034,
-    conservation: 'Natural',
-    images: ['http://recursos.decisaoentrega.com.br/Imagem/Produto/420/435650-3/cerveja-itaipava-latao-473ml-267824.jpg?v=20170612_05'],
-    evaluates: {
-      user_likes: []
-    }
-  },
-
-  {
-    _company: null,
-    productName: 'Caixa de morangos',
-    productType: 'Frutas',
-    price: { unit: 'Caixa', actual: 4.99, old: 9.80},
-    startDate: 1497352835668,
-    endDate: 1496834579823,
-    reason: 'Danificação',
-    shelf_life: 1497007401651,
-    conservation: 'Natural',
-    images: ['http://www.dicademusculacao.com.br/wp-content/uploads/2015/03/Morango.jpg'],
-    evaluates: {
-      user_likes: []
-    }
-  },
-
-  {
-    _company: null,
-    productName: 'Leite Molico',
-    productType: 'Leite',
-    price: { unit: 'Unidade', actual:10.99 , old: 19.99},
-    startDate: 1497353460663,
-    endDate: 1499859060663,
-    reason: 'Vencimento',
-    shelf_life: 1502969460663,
-    conservation: 'Natural',
-    images: ['http://dilettocafe.com.br/wp-content/uploads/2015/09/LEITE-MOLICO.jpg'],
-    evaluates: {
-      user_likes: []
-    }
-  },
-
-  {
-    _company: null,
-    productName: 'Shampoo + condicionador Pantene',
-    productType: 'Beleza',
-    price: { unit: 'Caixa', actual: 14.50, old: 18.99},
-    startDate: 1497353460663,
-    endDate: 1500135128237,
+    productName: 'Cerveja Budweiser 350ML',
+    productType: 'Cerveja',
+    price: { unit: 'Pacote com 4 unid.', actual: 9.27, old: 12.36},
+    startDate: 1496890800000,
+    endDate: 1498014000000,
     reason: 'Promoção',
-    shelf_life: 1502797260279,
     conservation: 'Natural',
-    images: ['http://smredemais.com.br/admin/Produtos/Facebook/60647ebbe3e0e38dc0aab0951da79cf2.png'],
+    images: ['http://cervejastore.vteximg.com.br/arquivos/ids/158557-1000-1000/Budweiser-Lt350.jpg'],
+    evaluates: {
+      user_likes: []
+    }
+  },
+
+  {
+    _company: null,
+    productName: 'Amaciante Mon Biju 2L',
+    productType: 'Amaciante',
+    price: { unit: 'Unidade', actual: 15.58, old: 23.37},
+    startDate: 1496890800000,
+    endDate: 1498014000000,
+    reason: 'Promoção',
+    conservation: 'Natural',
+    images: ['https://http2.mlstatic.com/amaciante-mon-bijou-magia-perfume-sedutor-2-litros-D_NQ_NP_892405-MLB20864558544_082016-F.jpg'],
+    evaluates: {
+      user_likes: []
+    }
+  },
+  {
+    _company: null,
+    productName: 'Cerveja Skol 473ML',
+    productType: 'Cerveja',
+    price: { unit: 'unidade', actual: 2.39, old: 2.99},
+    startDate: 1496890800000,
+    endDate: 1498014000000,
+    reason: 'Promoção',
+    conservation: 'Natural',
+    images: ['http://savegnago.vteximg.com.br/arquivos/ids/278451-1000-1000/CERVEJA-SKOL-473ML-LATA.jpg'],
+    evaluates: {
+      user_likes: []
+    }
+  },
+  {
+    _company: null,
+    productName: 'Refrigerantes Fanta e Sprite',
+    productType: 'Refrigerante',
+    price: { unit: 'Pacote com 3 unidades', actual: 2.39, old: 2.99},
+    startDate: 1496890800000,
+    endDate: 1498014000000,
+    reason: 'Promoção',
+    conservation: 'Natural',
+    images: ['http://www.centralcarioca24horas.com.br/wp-content/uploads/2015/10/FANTA_SPRITE_2_L.png'],
     evaluates: {
       user_likes: []
     }
@@ -70,63 +64,22 @@ var promotions = [
 
 ];
   var establishments = [
-    {
-      name: 'Doces && salgados cascata de vento',
-      email: 'cascatadevento@mail.com',
-      password: '123456',
-      subtitle: 'Doces e salgados pelo melhor preço',
-      imageUrl: 'http://4.bp.blogspot.com/-nr-UGC32sho/UjY4EecKo7I/AAAAAAAAABM/oOGGxJi9Wp0/s1600/Logo.png',
-      type: 'Doceria',
-      cnpj: '566965633',
-      phones: ['83992069565', '83332102258'],
-      likes: undefined,
-      totalNumberOfPublications: 0,
-      address: {
-        street: 'Rua das Bermudas',
-        neighborhood: 'Bodocongo',
-        number: 88,
-        cep: 569966,
-        city: 'Campina Grande',
-        uf: 'PB',
-        rank: 0
-      }
-    },
-
-      {name: 'Supermercado quero mais',
-        email: 'queromais@mail.com',
-        password: '123456',
-        subtitle: 'Quanto mais você compra mais você quer',
-        imageUrl:'http://www.giromarilia.com.br/img/news/amor-no-carrinho_1467813547.jpg',
-        type:'Supermercado',
-        cnpj:'5233669874',
-        likes: undefined,
-        phones: ['83910069565','8333442258'],
-        totalNumberOfPublications: 0,
-        address: {
-          street: 'Rua João de Deus',
-          neighborhood: 'Centro',
-          number: 120,
-          cep: 50221400,
-          city: 'Campina Grande',
-          uf: 'PB'
-        }
-      },
         {
-          name: 'Supermercado Rede compras',
-          email: 'redecompras_supermercados@mail.com',
+          name: 'Supermercado Ideal',
+          email: 'ideal_supermercado@mail.com',
           password: '123456',
-          subtitle: 'O melhor preço da cidade!',
-          imageUrl: 'https://pbs.twimg.com/profile_images/710526238251737089/vH8S-iOP.jpg',
+          subtitle: 'Este sim, é da nossa terra',
+          imageUrl: 'http://images.comunidades.net/ivu/ivultra/IDEAL2.png',
           type: 'Supermercado',
-          cnpj: '12345678',
+          cnpj: '08.957.326/0001-13',
           likes: undefined,
           totalNumberOfPublications: 0,
-          phones: ['83982069565', '8333002258'],
+          phones: ['08333416302'],
           address: {
-            street: 'R. JOão Lourenço Porto',
+            street: 'Rua Vigolvino Wanderley',
             neighborhood: 'Centro',
-            number: 374,
-            cep: 58401-311,
+            number: 290,
+            cep: "58400-126",
             city: 'Campina Grande',
             uf: 'PB'
           }
@@ -143,17 +96,7 @@ var promotions = [
       language: undefined,
       removeFinishPromotions: undefined
     }
-  }, {
-      name: 'Rafael de Carlos Pereira Silva',
-      email: 'rafael@mail.com',
-      password: '123456',
-      phone: '83999415698',
-      photo: undefined,
-      settings: {
-        language: undefined,
-        removeFinishPromotions: undefined
-      }
-    }];
+  }];
 
 exports.startDataBase = function addDatabase() {
 
@@ -229,7 +172,7 @@ function addPromotions() {
   Establishment.find({}, function (err, documents) {
     for (var i in promotions) {
       var promotion = new Promotion(promotions[i]);
-      promotion._company = documents[i % 3]._id;
+      promotion._company = documents[0]._id;
       promotion.save(function (err, savedDocument) {
         if (err) {
           throw err;
