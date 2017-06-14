@@ -89,7 +89,7 @@ var promotions = [
   users = [{
     name: 'Bruno Rafael Araújo Vasconcelos',
     email: 'bruno@mail.com',
-    password: '123456',
+    password: 'SecretIsNot4569',
     phone: '83982069790',
     photo: undefined,
     settings: {
