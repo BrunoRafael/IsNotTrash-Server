@@ -15,9 +15,9 @@ if (process.env.PORT) {
 
 var db = mongoose.connection;
 
-if(restartDb && process.env.NODE_ENV != 'test'){
+/*if(restartDb && process.env.NODE_ENV != 'test'){
 	InsertDataInDb.startDataBase();
-}
+}*/
 
 db.on('error', console.error.bind(console, 'Erro ao conectar no banco de dados'));
 db.once('open', console.error.bind(console, 'Conexao com banco de dados aberta com: ' + url_conn));
