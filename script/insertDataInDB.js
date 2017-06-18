@@ -101,16 +101,14 @@ var promotions = [
 exports.startDataBase = function addDatabase() {
 
   //removeHints();
-  addUsers();
-  addEstablishments();
-  /*User.remove({}, function(err){
+  User.remove({}, function(err){
     if(err){
       console.log("Erro ao remover a coleção : users" );
     } else {
       console.log("coleção removida : users");
       addUsers();
     }
-  });*/
+  });
 
   Promotion.remove({}, function(err){
     if(err){
@@ -136,13 +134,12 @@ function addEstablishments() {
     if (err) {
       throw err;
     }
-    addPromotions();
-    /*if (establishments.length > 0) {
+    if (establishments.length > 0) {
       console.log('Document saved name ' + savedDocument.name);
       addEstablishments();
     } else {
       addPromotions();
-    }*/
+    }
 
   });
 }
