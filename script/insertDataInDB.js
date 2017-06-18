@@ -90,7 +90,7 @@ var promotions = [
     name: 'Bruno Rafael Araújo Vasconcelos',
     email: 'bruno@mail.com',
     password: 'SecretIsNot4569',
-    phone: '83982069790',
+    phone: '83998560253',
     photo: undefined,
     settings: {
       language: undefined,
